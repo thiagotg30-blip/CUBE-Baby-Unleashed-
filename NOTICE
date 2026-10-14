@@ -1,0 +1,105 @@
+Avisos de terceiros e atribuições
+=================================
+
+Este programa incorporates material de terceiros. Os avisos abaixo devem ser
+preservados em qualquer redistribuição, junto com o código-fonte.
+
+-------------------------------------------------------------------------------
+1. cubecontrol — MIT
+-------------------------------------------------------------------------------
+Material de referência de engenharia reversa do protocolo SysEx do CUBE Baby.
+
+  The MIT License (MIT)
+  Copyright (c) <autores de cubecontrol>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+
+-------------------------------------------------------------------------------
+2. cuvave-midi — GPL-3.0-or-later
+-------------------------------------------------------------------------------
+Referência de engenharia reversa do protocolo. Por ser GPL-3.0 (copyleft), é
+a razão pela qual ESTE projeto inteiro precisa ser GPL-3.0-or-later.
+
+  Copyright (C) <autores de cuvave-midi>
+
+  Este programa é livre sob os termos da Licença Pública Geral GNU versão 3,
+  ou (a seu critério) de qualquer versão posterior.
+
+  Referência: https://github.com/<owner>/cuvave-midi
+  (substitua pela URL correta do projeto antes de publicar)
+
+-------------------------------------------------------------------------------
+3. preset-studio (TypeScript) — licença a confirmar
+-------------------------------------------------------------------------------
+O protocolo.py foi reimplementado a partir do preset-studio em TypeScript,
+que por sua vez derivou dos dois projetos acima. A licença do preset-studio
+precisa ser verificada e atribuída aqui antes da publicação. Enquanto isso não
+for confirmado, trate-o como GPL-3.0 (a opção conservadora).
+
+-------------------------------------------------------------------------------
+4. PySide6 / Qt 6 — LGPL-3.0 (com módulos sob GPL-3.0)
+-------------------------------------------------------------------------------
+  Qt 6 e PySide6 — The Qt Company e contribuidores.
+  LGPL-3.0 ou, para alguns módulos, GPL-3.0.
+
+  PySide6 é LGPLv3. A condição está em: a LGPL permite distribuir o binário que
+  embute a biblioteca, desde que (a) os avisos de licença sejam preservados,
+  (b) o usuário possa substituir/religar a biblioteca, e (c) o código-fonte
+  do PySide6 esteja disponível.
+
+  Qt: https://www.qt.io/licensing/
+  PySide6: https://doc.qt.io/qtforpython/licenses.html
+
+-------------------------------------------------------------------------------
+5. python-rtmidi — MIT
+-------------------------------------------------------------------------------
+  Copyright (c) Rafał Jonca, Timothée FlAMENT e contribuidores.
+
+  The MIT License (MIT)
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+
+-------------------------------------------------------------------------------
+6. Python Software Foundation License
+-------------------------------------------------------------------------------
+  Python é distribuído sob a PSF License 2.0.
+
+-------------------------------------------------------------------------------
+MARCA REGISTRADA
+-------------------------------------------------------------------------------
+"CUBE Baby" e "CUVAVE" são marcas de seus respectivos proprietários. Este projeto
+é independente e não tem qualquer vínculo, patrocínio ou endosso. O nome deste
+programa contém "Cube Baby" por fins descritivos; veja a seção "Nome do projeto"
+do README antes de distribuir publicamente.

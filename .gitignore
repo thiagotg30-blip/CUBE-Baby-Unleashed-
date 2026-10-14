@@ -1,0 +1,25 @@
+# Ambiente e build
+.venv/
+build/
+dist/
+*.spec
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Capturas de tela geradas por tests/shot.py
+shots/
+
+# Screenshots temporários
+screenshot*.png
+
+# Arquivos temporários de desenvolvimento
+_cabs.json
+*.tmp
