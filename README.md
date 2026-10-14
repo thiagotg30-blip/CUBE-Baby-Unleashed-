@@ -1,12 +1,33 @@
 # CUBE Baby Unleashed
 
 [![Licença: GPL-3.0](https://img.shields.io/badge/licen%C3%A7a-GPL--3.0-orange)](LICENSE)
-[![Python 3.12](https://img.shields.io/badge/python-3.12-blue)](https://www.python.org/downloads/)
-[![Qt 6 / PySide6](https://img.shields.io/badge/Qt-6%20%2F%20PySide6-green)](https://www.qt.io/)
+[![Windows 64-bit](https://img.shields.io/badge/Windows-64--bit-blue)](https://github.com/thiagotg30-blip/cubebaby-studio/releases/latest)
+[![Versão 4.0.0](https://img.shields.io/badge/vers%C3%A3o-4.0.0-green)](https://github.com/thiagotg30-blip/cubebaby-studio/releases/latest)
 
-**Editor desktop nativo para o pedal M-VAVE/CUVAVE CUBE Baby** — sem navegador, sem CubeSuite.
+**Editor de timbre para o pedal M-VAVE/CUVAVE CUBE Baby.** Sem navegador, sem CubeSuite.
 
 Projeto independente, **não afiliado** à M-VAVE, CUVAVE ou Sinco.
+
+---
+
+## Baixar e usar
+
+**Não precisa instalar nada.** Não precisa de Python, nem de programa nenhum.
+
+1. Baixe o arquivo **[`CUBEBabyUnleashed-4.0.0-win64.zip`](https://github.com/thiagotg30-blip/cubebaby-studio/releases/latest)** (53 MB)
+2. **Extraia** a pasta em qualquer lugar (ex: na Área de Trabalho)
+3. Conecte o pedal CUBE Baby no computador com o cabo USB
+4. Clique duas vezes em **`CUBEBabyUnleashed.exe`**
+
+> ⚠️ **Feche o CubeSuite antes.** Dois programas não podem usar a porta MIDI do pedal ao mesmo tempo.
+
+> ℹ️ Não rode de dentro do `.zip` — extraia primeiro. O programa precisa da pasta `_internal` que vem junto.
+
+**Só quer ver como é a interface, sem o pedal?** Abra o Prompt de Comando na pasta e digite:
+
+```cmd
+CUBEBabyUnleashed.exe --sim
+```
 
 ---
 
@@ -24,31 +45,6 @@ Projeto independente, **não afiliado** à M-VAVE, CUVAVE ou Sinco.
 
 ---
 
-## Rodar (Windows)
-
-Precisa do **Python 3.12** (o 3.14 ainda não tem pacote pronto do `python-rtmidi`).
-
-```cmd
-winget install Python.Python.3.12
-```
-
-Depois é só dar duplo clique:
-
-| arquivo | o que faz |
-|---|---|
-| **`run_debug.bat`** | cria o ambiente, instala tudo e abre o programa |
-| **`build_exe.bat`** | gera `dist\CUBEBabyUnleashed\CUBEBabyUnleashed.exe` |
-
-Sem pedal, para testar a interface:
-
-```cmd
-.venv\Scripts\python main.py --sim
-```
-
-> ⚠️ Feche o **CubeSuite** antes: dois programas não podem usar a porta MIDI do pedal ao mesmo tempo.
-
----
-
 ## Como usar (iniciante)
 
 1. **Conecte o pedal** por USB e clique em **Conectar**.
@@ -63,7 +59,7 @@ Sem pedal, para testar a interface:
 
 ## Onde ficam seus dados
 
-Tudo em `~/CUBEBabyUnleashed` (`%USERPROFILE%\CUBEBabyUnleashed` no Windows):
+Tudo em `%USERPROFILE%\CUBEBabyUnleashed`:
 
 ```
 CUBEBabyUnleashed/
@@ -92,15 +88,49 @@ Há uma aba **"Apoiar o projeto"** dentro do programa com tudo pronto para copia
 
 ---
 
-## Documentação técnica
+## Para desenvolvedores
+
+<details>
+<summary>Rodar a partir do código-fonte (clique para abrir)</summary>
+
+Precisa do **Python 3.12** (o 3.14 ainda não tem pacote pronto do `python-rtmidi`).
+
+```cmd
+winget install Python.Python.3.12
+```
+
+Depois é só dar duplo clique:
+
+| arquivo | o que faz |
+|---|---|
+| **`run_debug.bat`** | cria o ambiente, instala tudo e abre o programa com console |
+| **`build_exe.bat`** | gera o pacote em `dist\CUBEBabyUnleashed\` |
+
+Ou, direto:
+
+```cmd
+.venv\Scripts\python main.py --sim
+```
+
+### Testes
+
+```cmd
+.venv\Scripts\python tests\test_product.py
+.venv\Scripts\python tests\test_protocol.py
+```
+
+119 testes em 5 suítes. Rode com `QT_QPA_PLATFORM=offscreen` para os testes de UI.
+
+### Documentação técnica
 
 | documento | conteúdo |
 |---|---|
 | [`docs/ir-de-usuario.md`](docs/ir-de-usuario.md) | formato do IR de usuário, decifrado no hardware |
 | [`docs/engenharia-reversa-cubesuite.md`](docs/engenharia-reversa-cubesuite.md) | engenharia reversa do CubeSuite.exe (Ghidra + REA) |
 | [`docs/hardware-achados.md`](docs/hardware-achados.md) | achados medidos no pedal real |
-| [`docs/fiscal.md`](docs/fiscal.md) | como receber doações sem problema fiscal |
-| [`docs/README-completo.md`](docs/README-completo.md) | manual completo (documentação detalhada) |
+| [`docs/README-completo.md`](docs/README-completo.md) | manual completo |
+
+</details>
 
 ---
 
@@ -116,4 +146,4 @@ Doações são permitidas e não conflitam com a GPL.
 
 ## Contribuir
 
-Relatos de bug e sugestões são bem-vindos. Se for testar no hardware, **sempre** faça backup dos presets antes — o programa faz backup automático, mas dois backups não fazem mal.
+Relatos de bug e sugestões são bem-vindos em [Issues](https://github.com/thiagotg30-blip/cubebaby-studio/issues). Se for testar no hardware, **sempre** faça backup dos presets antes — o programa faz backup automático, mas dois backups não fazem mal.
