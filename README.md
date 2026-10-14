@@ -1,8 +1,8 @@
 # CUBE Baby Unleashed
 
 [![Licença: GPL-3.0](https://img.shields.io/badge/licen%C3%A7a-GPL--3.0-orange)](LICENSE)
-[![Windows 64-bit](https://img.shields.io/badge/Windows-64--bit-blue)](https://github.com/thiagotg30-blip/cubebaby-studio/releases/latest)
-[![Versão 4.0.0](https://img.shields.io/badge/vers%C3%A3o-4.0.0-green)](https://github.com/thiagotg30-blip/cubebaby-studio/releases/latest)
+[![Windows 64-bit](https://img.shields.io/badge/Windows-64--bit-blue)](https://github.com/thiagotg30-blip/CUBE-Baby-Unleashed-/releases/latest)
+[![Versão 4.0.0](https://img.shields.io/badge/vers%C3%A3o-4.0.0-green)](https://github.com/thiagotg30-blip/CUBE-Baby-Unleashed-/releases/latest)
 
 **Editor de timbre para o pedal M-VAVE/CUVAVE CUBE Baby.** Sem navegador, sem CubeSuite.
 
@@ -14,7 +14,7 @@ Projeto independente, **não afiliado** à M-VAVE, CUVAVE ou Sinco.
 
 **Não precisa instalar nada.** Não precisa de Python, nem de programa nenhum.
 
-1. Baixe o arquivo **[`CUBEBabyUnleashed-4.0.0-win64.zip`](https://github.com/thiagotg30-blip/cubebaby-studio/releases/latest)** (53 MB)
+1. Baixe o arquivo **[`CUBEBabyUnleashed-4.0.0-win64.zip`](https://github.com/thiagotg30-blip/CUBE-Baby-Unleashed-/releases/latest)** (53 MB)
 2. **Extraia** a pasta em qualquer lugar (ex: na Área de Trabalho)
 3. Conecte o pedal CUBE Baby no computador com o cabo USB
 4. Clique duas vezes em **`CUBEBabyUnleashed.exe`**
@@ -146,4 +146,4 @@ Doações são permitidas e não conflitam com a GPL.
 
 ## Contribuir
 
-Relatos de bug e sugestões são bem-vindos em [Issues](https://github.com/thiagotg30-blip/cubebaby-studio/issues). Se for testar no hardware, **sempre** faça backup dos presets antes — o programa faz backup automático, mas dois backups não fazem mal.
+Relatos de bug e sugestões são bem-vindos em [Issues](https://github.com/thiagotg30-blip/CUBE-Baby-Unleashed-/issues). Se for testar no hardware, **sempre** faça backup dos presets antes — o programa faz backup automático, mas dois backups não fazem mal.
