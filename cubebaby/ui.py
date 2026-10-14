@@ -2283,12 +2283,21 @@ def build_app(argv: list[str] | None = None):
     app.setStyle("Fusion")
     app.setStyleSheet(STYLE)
     # Ícone da aplicação (janela + barra de tarefas).
+    # No .exe empacotado pelo PyInstaller, os dados vão para sys._MEIPASS —
+    # __file__ aponta para dentro do arquivo temporário de extração e não
+    # acha o icon.ico. Procurar nos dois lugares cobre os dois casos.
     try:
+        import sys as _sys
         from pathlib import Path
         from PySide6.QtGui import QIcon
-        icon_path = Path(__file__).parent.parent / "icon.ico"
-        if icon_path.exists():
-            app.setWindowIcon(QIcon(str(icon_path)))
+        candidatos = [
+            Path(getattr(_sys, "_MEIPASS", "")) / "icon.ico",
+            Path(__file__).parent.parent / "icon.ico",
+        ]
+        for icon_path in candidatos:
+            if icon_path.exists():
+                app.setWindowIcon(QIcon(str(icon_path)))
+                break
     except Exception:
         pass
     return app
