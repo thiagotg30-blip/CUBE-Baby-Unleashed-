@@ -1250,25 +1250,6 @@ class AudioTab(QWidget):
             "color:#f0812a; font-size:11px;")
         mon.addWidget(lbl_b); mon.addWidget(self.cb_block); mon.addWidget(self.lbl_lat)
 
-        # Prioridade da thread de áudio (espelha o "Audio Thread Priority"
-        # do Reaper). O Qt Multimedia não expõe isso; aplicamos via ctypes
-        # (SetThreadPriority) na thread onde o áudio roda.
-        mon.addSpacing(12)
-        lbl_p = QLabel("Prioridade:"); lbl_p.setStyleSheet("color:#8f8b83;")
-        self.cb_prio = QComboBox()
-        for _k, (_nome, _v) in AU.PRIORIDADES.items():
-            self.cb_prio.addItem(_nome, _k)
-        self.cb_prio.setCurrentIndex(
-            list(AU.PRIORIDADES).index("normal"))
-        self.cb_prio.setToolTip(
-            "Prioridade que o Windows dá à thread de áudio.\n"
-            "Normal: padrão.\n"
-            "Alta: mais CPU para o áudio.\n"
-            "Crítica: igual ao Reaper (Time Critical) — menos risco de\n"
-            "estouro, mas pode deixar outros programas lentos.\n"
-            "Tempo real: máximo; use se a máquina aguentar.")
-        mon.addWidget(lbl_p); mon.addWidget(self.cb_prio)
-
         self.btn_mon = QPushButton(I18N.tr("ouvir_ao_vivo", I18N.get_idioma())); self.btn_mon.setObjectName("primary")
         self.btn_mon.setCheckable(True)
         self.btn_mon.setToolTip(GU.audio_tip("monitor"))
@@ -1369,13 +1350,9 @@ class AudioTab(QWidget):
                 )
                 self.btn_mon.setChecked(False)
                 return
-            prio = self.cb_prio.currentData()
-            if prio not in AU.PRIORIDADES:
-                prio = "normal"
             self.monitor.start(self.cb_in.currentIndex(), self.cb_out.currentIndex(),
                                self.sld_mon.value() / 100.0,
-                               block=self.cb_block.currentData(),
-                               prioridade=prio)
+                               block=self.cb_block.currentData())
             self.lbl_lat.setText(
                 f"~{self.monitor.estimated_latency_ms():.0f} ms "
                 f"({self.monitor.block} amostras a "

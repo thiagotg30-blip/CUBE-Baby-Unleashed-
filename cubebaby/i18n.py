@@ -71,7 +71,6 @@ TRADUCOES = {
     "monitor_ligado":   {"pt": "Monitor ligado", "en": "Monitor on",    "es": "Monitor activado"},
     "monitor_desligado":{"pt": "Monitor desligado", "en": "Monitor off", "es": "Monitor desactivado"},
     "latencia":         {"pt": "Latência:",      "en": "Latency:",      "es": "Latencia:"},
-    "prioridade":       {"pt": "Prioridade:",    "en": "Priority:",     "es": "Prioridad:"},
     "entrada_lbl":      {"pt": "Entrada:",        "en": "Input:",         "es": "Entrada:"},
     "saida_lbl":        {"pt": "Saída:",          "en": "Output:",        "es": "Salida:"},
     "volume_lbl":       {"pt": "Volume:",         "en": "Volume:",        "es": "Volumen:"},
@@ -208,10 +207,6 @@ TRADUCOES = {
     "nada_encontrado":  {"pt": "Nada encontrado com esse termo.", "en": "Nothing found with that term.", "es": "Nada encontrado con ese término."},
 
     # ---- Prioridade ----
-    "prio_normal":      {"pt": "Normal",         "en": "Normal",        "es": "Normal"},
-    "prio_alta":        {"pt": "Alta",           "en": "High",          "es": "Alta"},
-    "prio_critica":     {"pt": "Crítica",        "en": "Critical",      "es": "Crítica"},
-    "prio_realtime":    {"pt": "Tempo real",     "en": "Real-time",     "es": "Tiempo real"},
 }
 
 
