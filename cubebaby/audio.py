@@ -71,15 +71,22 @@ def guess_input(devices: list[str]) -> int:
 
 
 def native_rate(device, fallback: int = SAMPLE_RATE) -> int:
-    """Taxa nativa do dispositivo, se ela for um valor razoável."""
+    """Taxa nativa do dispositivo, se ela for um valor razoável.
+
+    Usa preferredFormat() primeiro: minimumSampleRate() pode retornar
+    valores muito baixos (ex: 8000 Hz) que não representam a taxa real
+    de operação, causando cálculo errado de buffer e latência.
+    """
     try:
-        sr = int(device.minimumSampleRate())
-        if sr > 0:
-            return sr
+        fmt = device.preferredFormat()
+        if fmt is not None:
+            sr = int(fmt.sampleRate())
+            if sr > 0:
+                return sr
     except Exception:  # noqa: BLE001
         pass
     try:
-        sr = int(device.preferredFormat().sampleRate())
+        sr = int(device.maximumSampleRate())
         if sr > 0:
             return sr
     except Exception:  # noqa: BLE001
